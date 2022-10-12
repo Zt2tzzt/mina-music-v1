@@ -1,0 +1,24 @@
+page {
+	height: 100vh;
+}
+
+.video {
+	/* video 默认宽度 300px、高度 225px */
+	width: 100%;
+}
+
+.info, .recommend {
+	padding: 30rpx;
+}
+.info .title {
+	font-weight: 700;
+}
+.info .desc, .info .other {
+	font-size: 24rpx;
+	margin-top: 10rpx;
+	color: #666;
+}
+
+.content {
+	height: calc(100% - 225px);
+}

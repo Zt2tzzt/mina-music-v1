@@ -1,0 +1,14 @@
+<wxs module="fmt" src="../../utils/format.wxs"></wxs>
+
+<view class="item" bindtap="onItemTap">
+  <view class="album">
+    <image class="image" mode="widthFix" src="{{ itemData.cover }}"></image>
+    <view class="info">
+      <!-- <view class="count">{{ itemData.playCount }}</view> -->
+      <view class="count">{{ fmt.playCount(itemData.playCount) }}</view>
+      <!-- <view class="duration">{{ itemData.mv.videos[0].duration }}</view> -->
+      <view class="duration">{{ fmt.time(itemData.mv.videos[0].duration) }}</view>
+    </view>
+  </view>
+  <view class="content">{{ itemData.name }} - {{ itemData.artistName }}</view>
+</view>

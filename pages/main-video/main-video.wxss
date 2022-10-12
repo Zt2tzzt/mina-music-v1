@@ -1,0 +1,10 @@
+.video-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 0 10px;
+}
+
+.video-list .item {
+	width: 48%;
+}
