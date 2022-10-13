@@ -2,7 +2,9 @@
   "pages": [
     "pages/main-music/main-music",
     "pages/main-video/main-video",
-    "pages/detail-video/detail-video"
+    "pages/detail-video/detail-video",
+    "pages/detail-search/detail-search",
+    "pages/detail-song/detail-song"
   ],
   "window": {
     "backgroundTextStyle": "dark",

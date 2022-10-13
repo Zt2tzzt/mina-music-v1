@@ -1,0 +1,23 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@vant/weapp': ^1.10.5
+  hy-event-store: ^1.2.1
+
+dependencies:
+  '@vant/weapp': registry.npmmirror.com/@vant/weapp/1.10.5
+  hy-event-store: registry.npmmirror.com/hy-event-store/1.2.1
+
+packages:
+
+  registry.npmmirror.com/@vant/weapp/1.10.5:
+    resolution: {integrity: sha512-bAHp9r0ZiRsOqPOLzQHI/ZvkAlXzol1/TFhM70MyghuxkzJTjcDUd8RIfLkCN3c1MCK/PfBGw2an8/afygftCg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vant/weapp/-/weapp-1.10.5.tgz}
+    name: '@vant/weapp'
+    version: 1.10.5
+    dev: false
+
+  registry.npmmirror.com/hy-event-store/1.2.1:
+    resolution: {integrity: sha512-viMS7Zj1VmFgkAENrJr0lMV29FWzaSgLg1gTcZ+WJXuPO+SOhehWqALoJIDGms02qG+tO+++VsPkgD0rXlAikA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/hy-event-store/-/hy-event-store-1.2.1.tgz}
+    name: hy-event-store
+    version: 1.2.1
+    dev: false

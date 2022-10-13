@@ -1,1 +1,26 @@
-/* pages/main-music/main-music.wxss */
+page {
+	--search-background-color: #fff;
+	--search-padding: 10px 0;
+
+	box-sizing: border-box;
+	padding: 0 24rpx;
+	background-color: #fafafa;
+}
+
+.swiper {
+	margin-top: 10rpx;
+	border-radius: 10rpx;
+	overflow: hidden;
+	/* 修复手机系统webview展示圆角的 bug */
+	transform: translateY(0);
+}
+
+.swiper-item {
+	display: flex;
+}
+
+.swiper-item .swiper-image {
+	width: 100%;
+}
+
+

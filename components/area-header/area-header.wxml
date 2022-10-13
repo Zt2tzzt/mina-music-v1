@@ -1,0 +1,12 @@
+<view class="header">
+	<view class="title">{{ title }}</view>
+	<view class="right" wx:if="{{ showRight }}" bind:tap="onRightTap">
+		<view class="slot">
+			<slot></slot>
+		</view>
+		<view class="default">
+			<text>{{ rightText }}</text>
+			<van-icon name="arrow" />
+		</view>
+	</view>
+</view>

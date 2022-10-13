@@ -1,0 +1,9 @@
+<wxs src="../../utils/format.wxs" module="fmt"></wxs>
+
+<view class="item">
+	<view class="top">
+		<image class="image" mode="widthFix" src="{{ item.coverImgUrl }}"></image>
+		<view class="play-counter">{{ fmt.playCount(item.playCount) }}</view>
+	</view>
+	<view class="bottom">{{ item.name }}</view>
+</view>

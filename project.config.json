@@ -1,7 +1,20 @@
 {
   "description": "项目配置文件",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "value": "note",
+        "type": "folder"
+      },
+      {
+        "value": "package.json",
+        "type": "file"
+      },
+      {
+        "value": "pnpm-lock.yaml",
+        "type": "file"
+      }
+    ],
     "include": []
   },
   "setting": {

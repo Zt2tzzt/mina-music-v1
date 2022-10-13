@@ -47,7 +47,7 @@ export const getMvUrl = id => ztRequest.get({
  * @param {Number} id 视频id
  * @return {Promise} 返回的请求
  */
-export const getMvRelate= id => ztRequest.get({
+export const getMvRelate = id => ztRequest.get({
 	url: '/related/allvideo',
 	data: {
 		id

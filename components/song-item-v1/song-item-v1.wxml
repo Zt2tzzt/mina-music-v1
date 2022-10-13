@@ -1,0 +1,10 @@
+<view class="item" bindtap="onItemTap">
+	<image class="image" src="{{itemData.al.picUrl}}"></image>
+	<view class="content">
+		<view class="name">{{itemData.name}}</view>
+		<view class="source">{{itemData.ar[0].name}} · {{itemData.al.name}}</view>
+	</view>
+	<view class="arrow">
+		<image class="icon" src="/assets/images/icons/arrow-right.png" />
+	</view>
+</view>

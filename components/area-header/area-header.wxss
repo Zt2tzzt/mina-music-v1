@@ -1,0 +1,22 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 88rpx;
+}
+
+.header .title {
+	font-size: 36rpx;
+	font-weight: 700;
+}
+
+.header .default {
+	display: none;
+	font-size: 28rpx;
+	color: #777;
+}
+
+/* slot 中如果内容为空，显示 default */
+.header .slot:empty + .default {
+	display: flex;
+}
