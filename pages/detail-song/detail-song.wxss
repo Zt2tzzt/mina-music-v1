@@ -1,1 +1,3 @@
-/* pages/detail-song/detail-song.wxss */
+page {
+	padding: 0 20rpx;
+}

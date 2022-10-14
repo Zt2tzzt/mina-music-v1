@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "area-head": "/components/area-header/area-header",
+    "menu-item": "/components/menu-item/menu-item"
+  }
+}

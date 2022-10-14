@@ -1,0 +1,19 @@
+<wxs src="../../utils/format.wxs" module="fmt"></wxs>
+
+<view class="item" bindtap="onItemTap">
+	<view class="content">
+		<view class="content-title">{{ itemData.name }}</view>
+		<view class="content-list">
+			<block wx:for="{{ 3 }}" wx:for-item="index" wx:key="*this">
+				<view class="content-list-item">
+					<text>{{ index + 1 }}. {{ itemData.tracks[index].name }}</text>
+					<text class="singer"> - {{ itemData.tracks[index].ar[0].name }}</text>
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="album">
+		<image class="image" src="{{ itemData.coverImgUrl }}" mode="aspectFill"></image>
+		<view class="play-counter">{{ fmt.playCount(itemData.playCount) }}</view>
+	</view>
+</view>

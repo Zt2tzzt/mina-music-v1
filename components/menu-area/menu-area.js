@@ -1,6 +1,5 @@
 const app = getApp()
 
-
 Component({
   properties: {
     title: {
@@ -27,7 +26,15 @@ Component({
   },
 
   methods: {
-    handleMenuItemClick(event) {
+    // 处理歌单标题右测“更多”点击事件
+    async handleMoreMenuTap() {
+      wx.navigateTo({
+        url: '/pages/detail-menu/detail-menu'
+      })
+    },
+
+    // 处理歌单 item 点击事件
+    onItemTap() {
       const { item } = event.currentTarget.dataset
       wx.navigateTo({
         url: `/packageDetail/pages/detail-songs/index?id=${item.id}&type=menu`

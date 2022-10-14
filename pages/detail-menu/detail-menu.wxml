@@ -1,0 +1,14 @@
+<view class="all-menu">
+	<block wx:for="{{ menus }}" wx:key="cat">
+			<view class="cat">
+				<area-head title="{{ item.cat }}" showRight="{{ false }}"></area-head>
+				<view class="list">
+					<block wx:for="{{ item.playlists }}" wx:key="id" wx:for-item="iten">
+						<view class="item">
+							<menu-item itemData="{{ iten }}"></menu-item>
+						</view>
+					</block>
+				</view>
+			</view>
+	</block>
+</view>
