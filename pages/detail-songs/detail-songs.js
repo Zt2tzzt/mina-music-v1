@@ -13,7 +13,8 @@ Page({
 	// -------------------- 生命周期 ----------------------
 
   onLoad(options) {
-    const { type, key, menuId } = options 
+    const { type, key, menuId } = options
+    this.type = type
 
     switch (type) {
       case 'rank':
@@ -25,6 +26,7 @@ Page({
         recommendStore.onState(this.key, this.handSongs)
         break;
       case 'menu':
+        this.setData({ type: this.type })
         this.menuId = menuId
         this.fetchSongs()
         break;
@@ -52,6 +54,17 @@ Page({
     // 设值页面标题
     wx.setNavigationBarTitle({
       title: value.name
+    });
+  },
+
+  // 处理歌曲 iten 点击事件
+  onItemTap(event) {
+    const index =  event.currentTarget.dataset.index
+    const song = this.data.songs.tracks[index]
+    console.log('song v2', song)
+    const id = song.id
+    wx.navigateTo({
+      url: '/pages/music-player/music-player?id=' + id,
     });
   },
 

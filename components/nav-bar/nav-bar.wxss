@@ -1,0 +1,33 @@
+.nav-bar {
+  display: flex;
+  text-align: center;
+  color: #ffffff;
+}
+
+.left, .right, .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left, .right {
+  width: 120rpx;
+}
+
+.center {
+  flex: 1;
+}
+
+.left .default .icon {
+  width: 44rpx;
+  display: block;
+}
+
+.default {
+  display: none;
+}
+
+.slot:empty + .default {
+  display: block;
+}
+

@@ -35,10 +35,10 @@ Component({
 
     // 处理歌单 item 点击事件
     onItemTap() {
-      const { item } = event.currentTarget.dataset
+    /*   const { item } = event.currentTarget.dataset
       wx.navigateTo({
         url: `/packageDetail/pages/detail-songs/index?id=${item.id}&type=menu`
-      })
+      }) */
     }
   }
 })

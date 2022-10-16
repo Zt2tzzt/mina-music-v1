@@ -1,0 +1,25 @@
+<view class="nav">
+	<!-- 手机状态栏 -->
+	<view style="height: {{ statusBarHeight }}px;"></view>
+	<!-- 导航栏 -->
+	<view class="nav-bar" style="height: {{ navBarHeight }}px;">
+		<!-- 左边区域 -->
+		<view class="left">
+			<view class="slot">
+				<slot name="left"></slot>
+			</view>
+			<view class="default" bindtap="onBackTap">
+				<image class="icon" mode="widthFix" src="/assets/images/icons/arrow-left.png" />
+			</view>
+		</view>
+		<!-- 中间区域 -->
+		<view class="center">
+			<view class="slot">
+				<slot name="center"></slot>
+			</view>
+			<view class="default">{{ title }}</view>
+		</view>
+		<!-- 右边区域 -->
+		<view class="right"></view>
+	</view>
+</view>

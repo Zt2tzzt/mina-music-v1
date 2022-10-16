@@ -3,7 +3,7 @@
  * @Author: ZeT1an
  * @Date: 2022-01-04 15:59:04
  * @LastEditors: ZeT1an
- * @LastEditTime: 2022-10-14 20:59:24
+ * @LastEditTime: 2022-10-16 12:07:43
  * @LastEditContent: 
  */
 Component({
@@ -18,7 +18,7 @@ Component({
   methods: {
     onItemTap() {
       wx.navigateTo({
-        url: '/pages/detail-song/detail-song?type=menu&menuId=' + this.properties.itemData.id
+        url: '/pages/detail-songs/detail-songs?type=menu&menuId=' + this.properties.itemData.id
       })
     }
   }

@@ -10,6 +10,8 @@
 		<song-item-v2
 			itemData="{{ item }}"
 			index="{{ index + 1 }}"
+			bindtap="onItemTap"
+			data-index="{{ index }}"
 		/>
 	</block>
 </view>
