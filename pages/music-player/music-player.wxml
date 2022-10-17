@@ -62,7 +62,7 @@
 			<image class="btn btn-music" src="/assets/images/player/play_music.png" />
 		</view>
 	</swiper-item>
-	<!-- 歌词s'z's'w's's'x页 -->
+	<!-- 歌词页 -->
 	<swiper-item class="lyric">
 		<scroll-view
 			class="lyric-list"
