@@ -1,0 +1,24 @@
+<!-- 播放工具栏 -->
+<view class="play-bar-placeholder" wx:if="{{ song.id }}" />
+<view
+	class="play-bar" 
+	wx:if="{{ song.id }}"
+	bindtap="obarTap">
+	<view class="left">
+		<image
+			class="album album-anim"
+			style="animation-play-state: {{ playAnimState }}"
+			mode="aspectFill"
+			src="{{ song.al.picUrl }}"/>
+		<view class="name">{{ song.name }}</view>
+	</view>
+	<view class="right">
+		<image
+			class="icon play"
+			src="/assets/images/music/{{ isPlaying ? 'pause' : 'play' }}_icon.png"
+			catchtap="onPlayOrPauseBtnTap"/>
+		<image
+			class="icon playlist"
+			src="/assets/images/music/playlist_icon.png"/>
+	</view>
+</view>

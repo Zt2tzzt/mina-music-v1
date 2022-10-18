@@ -6,6 +6,7 @@
     "area-header": "/components/area-header/area-header",
     "song-item-v1": "/components/song-item-v1/song-item-v1",
     "menu-area": "/components/menu-area/menu-area",
-    "rank-item": "/components/rank-item/rank-item"
+    "rank-item": "/components/rank-item/rank-item",
+    "play-bar": "/components/play-bar/play-bar"
   }
 }

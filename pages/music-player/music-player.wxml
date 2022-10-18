@@ -55,10 +55,10 @@
 		</view>
 		<!-- 操作区域 -->
 		<view class="operation">
-			<image class="btn btn-mode" src="/assets/images/player/play_{{ playModeName }}.png" bindtap="handleModeBtnClick" />
-			<image class="btn btn-prev" src="/assets/images/player/play_prev.png" bindtap="handlePrevBtnClick" />
-			<image class="btn btn-pause" src="/assets/images/player/play_{{ btnPlayOrPauseName }}.png" bindtap="onPlayOrPauseBtnTap" />
-			<image class="btn btn-next" src="/assets/images/player/play_next.png" bindtap="handleNextBtnClick" />
+			<image class="btn btn-mode" src="/assets/images/player/play_{{ modeName }}.png" bindtap="onModeBtnTap" />
+			<image class="btn btn-prev" src="/assets/images/player/play_prev.png" bindtap="onPreBtnTap" />
+			<image class="btn btn-pause" src="/assets/images/player/play_{{ isPlaying ? 'pause' : 'resume' }}.png" bindtap="onPlayOrPauseBtnTap" />
+			<image class="btn btn-next" src="/assets/images/player/play_next.png" bindtap="onNextBtnTap" />
 			<image class="btn btn-music" src="/assets/images/player/play_music.png" />
 		</view>
 	</swiper-item>

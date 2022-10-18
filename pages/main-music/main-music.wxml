@@ -69,3 +69,6 @@
 		</block>
 	</view>
 </view>
+
+<!-- 播放条 -->
+<play-bar />

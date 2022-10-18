@@ -3,3 +3,5 @@
     <video-item-v1 class="item" itemData="{{ item }}" />
   </block>
 </view>
+
+<play-bar />

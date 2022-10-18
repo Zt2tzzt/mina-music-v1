@@ -3,6 +3,7 @@ import queryRect from '../../utils/query-rect'
 import throttle from '../../utils/throttle'
 import recommendStore from '../../store/recommendStore'
 import ranksStore, { ranksKey, ranks } from '../../store/ranksStore'
+import playStore from '../../store/playStore'
 
 const queryRectThrottle = throttle(queryRect, 30)
 
@@ -100,11 +101,8 @@ Page({
   // 处理推荐歌曲中，歌曲 item 点击事件。
   onRecommendSongItemTap(event) {
     const index =  event.currentTarget.dataset.index
-    const song = this.data.recommendSongs[index]
-    const id = song.id
-    wx.navigateTo({
-      url: '/pages/music-player/music-player?id=' + id,
-    });
+    playStore.setState('songs', this.data.recommendSongs)
+    playStore.setState('songIndex', index)
   },
 
 	// -------------------- 自行封装 ----------------------

@@ -1,5 +1,6 @@
 import ranksStore from '../../store/ranksStore';
 import recommendStore from '../../store/recommendStore'
+import playStore from '../../store/playStore'
 import { getPlayListDetail } from '../../services/modules/music'
 
 Page({
@@ -19,11 +20,11 @@ Page({
     switch (type) {
       case 'rank':
         this.key = key
-        ranksStore.onState(this.key, this.handSongs)
+        ranksStore.onState(this.key, this.handSongsListenner)
         break;
       case 'recommend':
         this.key = 'recommendSongs'
-        recommendStore.onState(this.key, this.handSongs)
+        recommendStore.onState(this.key, this.handSongsListenner)
         break;
       case 'menu':
         this.setData({ type: this.type })
@@ -37,10 +38,10 @@ Page({
     const type = this.type
     switch (type) {
       case 'rank':
-        ranksStore.offState(this.key, this.handSongs)
+        ranksStore.offState(this.key, this.handSongsListenner)
         break;
       case 'recommend':
-        recommendStore.offState(this.key, this.handSongs)
+        recommendStore.offState(this.key, this.handSongsListenner)
         break;
     }
   },
@@ -48,7 +49,7 @@ Page({
   // -------------------- 事件处理 ----------------------
 
   // 处理 store 中，歌曲列表数据的更改。
-  handSongs(value) {
+  handSongsListenner(value) {
     console.log('detai song onState:', value)
     this.setData({ songs: value })
     // 设值页面标题
@@ -60,12 +61,8 @@ Page({
   // 处理歌曲 iten 点击事件
   onItemTap(event) {
     const index =  event.currentTarget.dataset.index
-    const song = this.data.songs.tracks[index]
-    console.log('song v2', song)
-    const id = song.id
-    wx.navigateTo({
-      url: '/pages/music-player/music-player?id=' + id,
-    });
+    playStore.setState('songs', this.data.songs.tracks)
+    playStore.setState('songIndex', index)
   },
 
   // -------------------- 自行封装 ----------------------
