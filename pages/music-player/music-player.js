@@ -139,6 +139,8 @@ Page({
     isPlaying,
     modeIndex
   }) {
+    console.log('nowTime', nowTime);
+    console.log('durationTime', durationTime);
     if (id !== undefined) this.setData({ id })
     if (song) this.setData({ song })
     if (songIndex !== undefined) this.setData({ songIndex })
@@ -146,8 +148,8 @@ Page({
     if (lyric) this.setData({ lyric })
     if (lyricIndex !== undefined) this.setData({ lyricIndex, lyricScrollTop: lyricIndex * 35 })
     if (lyrics) this.setData({ lyrics })
-    if (nowTime) this.updateSliderAndNowtime(nowTime)
-    if (durationTime) this.setData({ durationTime })
+    if (nowTime) this.updateSliderAndNowtime(nowTime, durationTime)
+    if (durationTime) this.setData({ durationTime }); this.updateSliderAndNowtime(nowTime, durationTime)
     if (isPlaying !== undefined) this.setData({ isPlaying })
     if (modeIndex !== undefined) this.setData({ modeName: modeNames[modeIndex] })
   },
@@ -155,12 +157,20 @@ Page({
 	// -------------------- 自行封装 ----------------------
 
   // 改变滑块进度，和当前时间显示。
-  updateSliderAndNowtime: throttle(function(nowTime) {
+  updateSliderAndNowtime: throttle(function(nowTime, durationTime) {
     if (this.isSliderChanging) return
     this.setData({
       nowTime,
-      sliderProgress: nowTime / this.data.durationTime * 100
+      sliderProgress: (nowTime ||= this.data.nowTime) / (durationTime ||= this.data.durationTime) * 100
     })
   }, 800, { leading: false })
+
+  /* updateSliderAndNowtime(nowTime, durationTime) {
+    if (this.isSliderChanging) return
+    this.setData({
+      nowTime,
+      sliderProgress: (nowTime ||= this.data.nowTime) / (durationTime ||= this.data.durationTime) * 100
+    })
+  } */
 
 })
