@@ -35,6 +35,13 @@
           "query": "id=1431292823",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "main-profile",
+          "pathName": "pages/main-profile/main-profile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

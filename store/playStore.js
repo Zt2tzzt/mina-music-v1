@@ -1,6 +1,7 @@
 import { HYEventStore } from 'hy-event-store'
 import { getSongs, getSongLyric } from '../services/modules/player'
 import parseLyric from '../utils/parse-lyric'
+import { historyCollection } from '../database/index'
 
 export const audioContext = wx.createInnerAudioContext()
 
@@ -46,6 +47,7 @@ export default new HYEventStore({
         console.log('song info res:', res)
         ctx.song = res.songs[0],
         ctx.durationTime = res.songs[0].dt
+        historyCollection.insert(ctx.song)
       })
 
       // 根据 id 获取歌词的信息

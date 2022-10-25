@@ -2,6 +2,7 @@ import ranksStore from '../../store/ranksStore';
 import recommendStore from '../../store/recommendStore'
 import playStore from '../../store/playStore'
 import { getPlayListDetail } from '../../services/modules/music'
+import { db } from '../../database/index'
 
 Page({
   data: {
@@ -14,12 +15,12 @@ Page({
 	// -------------------- 生命周期 ----------------------
 
   onLoad(options) {
-    const { type, key, menuId } = options
+    const { type } = options
     this.type = type
 
     switch (type) {
       case 'rank':
-        this.key = key
+        this.key = Options.key
         ranksStore.onState(this.key, this.handSongsListenner)
         break;
       case 'recommend':
@@ -28,8 +29,24 @@ Page({
         break;
       case 'menu':
         this.setData({ type: this.type })
-        this.menuId = menuId
+        this.menuId = options.menuId
         this.fetchSongs()
+        break;
+      case 'profile':
+        const tabname = options.tabname
+        const title = options.title
+        // 1. 动态获取集合
+        const collection = db.collection(`c_${tabname}`)
+        // 2. 获取数据打结果
+        collection.get()
+        .then(res => {
+          this.setData({
+            songs: {
+              name: title,
+              tracks: res.data
+            }
+          })
+        })
         break;
     }
   },

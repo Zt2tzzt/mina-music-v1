@@ -35,3 +35,9 @@
 .source .dots {
   margin: 0 6rpx;
 }
+
+.more-cion {
+  font-size: 40rpx;
+  margin-right: 60rpx;
+  color: #aaaaaa;
+}

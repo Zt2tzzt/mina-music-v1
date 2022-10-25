@@ -21,5 +21,15 @@ App({
     this.globalData.contentHeight =this.globalData.screenHeight - this.globalData.statusBarHeight - this.globalData.navBarHeight
     // 获取手机高度/宽度比例。
     this.globalData.deviceRadio = info.screenHeight / info.screenWidth
+
+    // 启用云开发能力
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力');
+    } else {
+      wx.cloud.init({
+        env: 'cloud1-8g4a3iira9235aea',
+        traceUser: true,
+      });
+    }
   },
 })
