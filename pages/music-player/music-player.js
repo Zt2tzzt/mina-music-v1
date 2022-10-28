@@ -8,7 +8,6 @@ const stateKeys = ['id', 'song', 'songs', 'songIndex', 'lyric', 'lyricIndex', 'l
 Page({
 
   data: {
-
     contentHeight: 500,  // swiper 的高度，默认 600
     tabs: ['歌曲', '歌词'],
     page: 0, // 当前页面（歌词：1/歌曲：0）

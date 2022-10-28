@@ -5,10 +5,7 @@ Page({
 
   data: {
     isLogin: false,
-    userInfo: {
-      avatarUrl: '',
-      nickName: ''
-    },
+    userInfo: {},
     tabs: [
       {
         name: "我的收藏",
@@ -42,10 +39,9 @@ Page({
         userInfo
       })
     }
-    // 2.共享歌单数据
     playListStore.onState('playList', this.handlePlayList)
   },
-  
+
   onUnload() {
     playListStore.offState('playList', this.handlePlayList)
   },
@@ -54,7 +50,7 @@ Page({
 
   // 登录
   onUserInfoTap() {
-    if (isLogin) return
+    if (this.data.isLogin) return
 
     // 1. 获取用户的头像、昵称
     const p1 = wx.getUserProfile({
@@ -79,6 +75,22 @@ Page({
         userInfo,
       })
     })
+  },
+
+  // 登出
+  onLogoutBtnTap() {
+    wx.showModal({
+      title: '确认注销',
+      content: '注销后可再次登录'
+    }).then(res => {
+      wx.removeStorageSync('openid')
+      wx.removeStorageSync('userInfo')
+      this.setData({
+        isLogin: false,
+        userInfo: {}
+      })
+    })
+
   },
 
   // 收藏、喜欢、历史记录点击

@@ -14,6 +14,5 @@ const playListStore = new HYEventStore({
     }
   }
 })
-
 playListStore.dispatch('fetchPlayListAction')
 export default playListStore

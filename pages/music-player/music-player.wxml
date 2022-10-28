@@ -20,7 +20,9 @@
 	class="content"
 	style="height: {{ contentHeight }}px;"
   current="{{ page }}"
-	bindchange="onSwiperChange">
+	bindchange="onSwiperChange"
+>
+
 	<!-- 歌曲页 -->
 	<swiper-item class="music">
 		<!-- 封面 -->
@@ -62,6 +64,7 @@
 			<image class="btn btn-music" src="/assets/images/player/play_music.png" />
 		</view>
 	</swiper-item>
+
 	<!-- 歌词页 -->
 	<swiper-item class="lyric">
 		<scroll-view
@@ -78,4 +81,5 @@
 			</block>
 		</scroll-view>
 	</swiper-item>
+  
 </swiper>

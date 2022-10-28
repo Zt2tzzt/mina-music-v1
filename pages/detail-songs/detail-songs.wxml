@@ -12,6 +12,7 @@
 			serial="{{ index + 1 }}"
 			bindtap="onItemTap"
 			data-index="{{ index }}"
+      playList="{{ playList }}"
 		/>
 	</block>
 </view>
