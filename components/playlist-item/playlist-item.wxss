@@ -1,0 +1,30 @@
+/* components/menu-item-v2/menu-item-v2.wxss */
+.item {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+}
+.item .icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+}
+.item .info {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.item .info .name {
+  font-size: 28rpx;
+}
+
+.item .info .count {
+  color: #999;
+}
+
+.delete-icon {
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  color: #999;
+}

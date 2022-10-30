@@ -12,3 +12,5 @@
 			</view>
 	</block>
 </view>
+
+<play-bar />

@@ -1,0 +1,53 @@
+<!-- 头像、昵称 -->
+<view class="section userinfo" bindtap="onUserInfoTap">
+  <image class="avatar" src="{{ isLogin ? userInfo.avatarUrl : '/assets/images/profile/avatar_placeholder.png' }}"></image>
+  <view class="nickname">{{ isLogin ? userInfo.nickName : '未登录' }}</view>
+  <button class="logout" type="primary" size="mini" plain catchtap="onLogoutBtnTap" wx:if="{{ isLogin }}">注销</button>
+</view>
+
+<!-- tab 选项 -->
+<view class="section tabs">
+  <block wx:for="{{ tabs }}" wx:key="name">
+    <view class="item" bindtap="onMyTabTap" data-item="{{ item }}">
+      <image class="icon" src="/assets/images/profile/{{ item.type }}.png"></image>
+      <view class="name">{{ item.name }}</view>
+    </view>
+  </block>
+</view>
+
+<!-- 我的歌单 -->
+<view class="mine-menu">
+  <area-header title="我的歌单" showRight="{{ false }}"></area-header>
+  <view class="sction content">
+    <view class="header">
+      <view class="title">创建歌单</view>
+      <van-icon name="plus" bindtap="onPlusTap" />
+    </view>
+    <view class="list">
+      <block wx:for="{{ playList }}" wx:key="name">
+        <playlist-item itemData="{{ item }}"></playlist-item>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 创建歌单提示框 -->
+<van-dialog
+  class="dialog"
+  use-slot
+  title="创建歌单"
+  show="{{ showDialog }}"
+  show-cancel-button,
+  bind:confirm="onDialogConfirm"
+>
+  <input 
+    class="input" 
+    model:value="{{ playListName }}"
+    bindinput="onInputChange"
+    placeholder="请输入歌单的名称" 
+    type="text"
+  />
+</van-dialog>
+
+
+

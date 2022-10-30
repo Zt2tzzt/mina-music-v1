@@ -9,7 +9,12 @@
 	<block wx:for="{{ songs.tracks }}" wx:key="id">
 		<song-item-v2
 			itemData="{{ item }}"
-			index="{{ index + 1 }}"
+			serial="{{ index + 1 }}"
+			bindtap="onItemTap"
+			data-index="{{ index }}"
+      playList="{{ playList }}"
 		/>
 	</block>
 </view>
+
+<play-bar />

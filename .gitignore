@@ -4,4 +4,4 @@ node_modules
 .vscode
 
 # 避免提交的文件
-project.private.config.json
+# project.private.config.json

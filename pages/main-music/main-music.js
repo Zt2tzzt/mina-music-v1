@@ -3,6 +3,7 @@ import queryRect from '../../utils/query-rect'
 import throttle from '../../utils/throttle'
 import recommendStore from '../../store/recommendStore'
 import ranksStore, { ranksKey, ranks } from '../../store/ranksStore'
+import playStore from '../../store/playStore'
 
 const queryRectThrottle = throttle(queryRect, 30)
 
@@ -74,7 +75,7 @@ Page({
   // 处理标题右测区域点击
   handlleMoreRecommendSongTap() {
     wx.navigateTo({
-      url: '/pages/detail-song/detail-song?type=recommend'
+      url: '/pages/detail-songs/detail-songs?type=recommend'
     })
   },
 
@@ -94,8 +95,14 @@ Page({
         hasRanksData: !!value.name,
         ranks: { ...this.data.ranks, [key]: value }
       })
-
     }
+  },
+
+  // 处理推荐歌曲中，歌曲 item 点击事件。
+  onRecommendSongItemTap(event) {
+    const index =  event.currentTarget.dataset.index
+    playStore.setState('songs', this.data.recommendSongs)
+    playStore.setState('songIndex', index)
   },
 
 	// -------------------- 自行封装 ----------------------

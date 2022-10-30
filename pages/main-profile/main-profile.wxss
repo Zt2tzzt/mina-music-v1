@@ -1,0 +1,78 @@
+page {
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #fafafa;
+}
+
+.section {
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+
+/* 头像、昵称 */
+.userinfo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.userinfo > .avatar {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.userinfo > .nickname {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.userinfo > .logout {
+  position: absolute;
+  right: 40rpx;
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs > .item > .icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.tabs > .item > .name {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+
+/* 歌单样式 */
+.mine-menu .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #888;
+}
+
+.dialog .input {
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 30rpx;
+  padding: 0 16rpx;
+  border: 1px solid #eee;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+}
+
+

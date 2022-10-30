@@ -1,11 +1,3 @@
-/*
- * @Description: file content
- * @Author: ZeT1an
- * @Date: 2022-01-02 19:36:29
- * @LastEditors: ZeT1an
- * @LastEditTime: 2022-10-13 15:36:18
- * @LastEditContent: 
- */
 Component({
   properties: {
     title: {

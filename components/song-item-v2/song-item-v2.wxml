@@ -1,5 +1,5 @@
-<view class="item" bindtap="handleSongItemClick">
-	<view class="index">{{ index }}</view>
+<view class="item" bindtap="onItemTap">
+	<view class="serial">{{ serial }}</view>
 	<view class="info">
 		<view class="name">{{ itemData.name }}</view>
 		<view class="source">
@@ -11,4 +11,5 @@
 			</text>
 		</view>
 	</view>
+  <van-icon name="more-o" class="more-cion" catchtap="onMoreBtnTap" />
 </view>

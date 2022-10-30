@@ -35,7 +35,7 @@
 		<block wx:for="{{ recommendSongs }}" wx:key="id">
 			<song-item-v1
 				itemData="{{ item }}"
-				bindtap=" handleSongItemClick "
+				bindtap="onRecommendSongItemTap"
 				data-index="{{ index }}" />
 		</block>
 	</view>
@@ -69,3 +69,6 @@
 		</block>
 	</view>
 </view>
+
+<!-- 播放条 -->
+<play-bar />
