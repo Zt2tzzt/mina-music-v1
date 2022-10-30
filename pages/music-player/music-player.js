@@ -138,8 +138,6 @@ Page({
     isPlaying,
     modeIndex
   }) {
-    console.log('nowTime', nowTime);
-    console.log('durationTime', durationTime);
     if (id !== undefined) this.setData({ id })
     if (song) this.setData({ song })
     if (songIndex !== undefined) this.setData({ songIndex })

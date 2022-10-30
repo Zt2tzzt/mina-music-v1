@@ -54,7 +54,7 @@ Page({
 
     // 1. 获取用户的头像、昵称
     const p1 = wx.getUserProfile({
-      desc: '获取您的头像、昵称',
+      desc: '获取您的头像、昵称用于展示',
     })
 
     // 2. 获取用户的 openid

@@ -28,8 +28,9 @@ export default new HYEventStore({
   actions: {
     // 播放歌曲
     playSongAction(ctx, id) {
-      // 同一首歌不需要重新加载
-      if (id === ctx.id) return
+			// 同一首歌不需要重新加载
+			console.log('play song id:', id);
+      if (id == ctx.id) return
 
       // 重置原来的数据
       ctx.song = {}
