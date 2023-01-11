@@ -42,7 +42,7 @@
 </view>
 
 <!-- 热门歌单 -->
-<menu-area
+<menmu-area
 	title="热门歌单"
 	songMenu="{{ hotMenu }}"
 	wx:if="{{ hotMenu.length }}"

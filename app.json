@@ -12,8 +12,8 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "ZTMusic",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "ZTMusic"
   },
   "tabBar": {
     "list": [
