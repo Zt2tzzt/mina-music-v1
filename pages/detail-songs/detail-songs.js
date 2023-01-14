@@ -22,7 +22,7 @@ Page({
 
     switch (type) {
       case 'rank':
-        this.key = Options.key
+        this.key = options.key
         ranksStore.onState(this.key, this.handSongsListenner)
         break;
       case 'recommend':
